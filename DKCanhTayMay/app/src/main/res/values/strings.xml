@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Điều Khiển Cánh Tay Máy</string>
+    <string name="pushs5">Servo 5</string>
+    <string name="pushs4">Servo 4</string>
+    <string name="pushs3">Servo 3</string>
+    <string name="pushs2">Servo 2</string>
+    <string name="pushs1">Servo 1</string>
+    <string name="nhapgocquay">Nhập Góc Quay</string>
+    <string name="empty" />
+    <string name="zero">0</string>
+    <string name="o_t_hel">Loading…</string>
+    <string name="switch_mode">SWITCH MODE</string>
+    <string name="sp_1">SP 1</string>
+    <string name="sp_2">SP 2</string>
+    <string name="v_tr_g_p_h_ng_h_a">Vị Trí Gắp Hàng Hóa</string>
+    <string name="sp_3">SP 3</string>
+    <string name="kh_ng_th_ph_n_lo_i">Không Thể Phân Loại</string>
+
+</resources>
