@@ -1,4 +1,4 @@
- import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 from time import sleep
 import pyrebase
 import pigpio
@@ -84,6 +84,316 @@ servo42 = db.child("GocQuay").child("4").child("servo2").get().val()
 servo43 = db.child("GocQuay").child("4").child("servo3").get().val()
 servo44 = db.child("GocQuay").child("4").child("servo4").get().val()
 servo45 = db.child("GocQuay").child("4").child("servo5").get().val()
+
+def vitrigaphang(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos):
+    if (servo1Pos > servo01) :
+        for j in range ( servo1Pos , servo01 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo1Pos = servo01
+            
+    elif (servo1Pos < servo01):
+        for j in range ( servo1Pos , servo01 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo1Pos = servo01
+
+    if (servo2Pos > servo02) :
+        for j in range ( servo2Pos , servo02 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo2Pos = servo02
+            
+    elif (servo2Pos < servo02):
+        for j in range ( servo2Pos , servo02 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo2Pos = servo02
+
+    if (servo3Pos > servo03) :
+        for j in range ( servo3Pos , servo03 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo3Pos = servo03
+            
+    elif (servo3Pos < servo03):
+        for j in range ( servo3Pos , servo03 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo3Pos = servo03
+
+    if (servo4Pos > servo04) :
+        for j in range ( servo4Pos , servo04 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo4Pos = servo04
+            
+    elif (servo4Pos < servo04):
+        for j in range ( servo4Pos , servo04 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo4Pos = servo04
+    
+    if (servo5Pos > servo05) :
+        for j in range ( servo5Pos , servo05 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo5Pos = servo05
+            
+    elif (servo5Pos < servo05):
+        for j in range ( servo5Pos , servo05 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo5Pos = servo05
+    return servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos
+
+def vitrisp1(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos):
+    if (servo4Pos > servo14) :
+        for j in range ( servo4Pos , servo14 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo4Pos = servo14
+            
+    elif (servo4Pos < servo14):
+        for j in range ( servo4Pos , servo14 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo4Pos = servo14
+
+    if (servo3Pos > servo13) :
+        for j in range ( servo3Pos , servo13 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo3Pos = servo13
+            
+    elif (servo3Pos < servo13):
+        for j in range ( servo3Pos , servo13 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo3Pos = servo13
+
+    if (servo2Pos > servo12) :
+        for j in range ( servo2Pos , servo12 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo2Pos = servo12
+            
+    elif (servo2Pos < servo12):
+        for j in range ( servo2Pos , servo12 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo2Pos = servo12
+
+    if (servo1Pos > servo11) :
+        for j in range ( servo1Pos , servo11 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo1Pos = servo11
+            
+    elif (servo1Pos < servo11):
+        for j in range ( servo1Pos , servo11 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo1Pos = servo11
+
+    if (servo5Pos > servo15) :
+        for j in range ( servo5Pos , servo15 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo5Pos = servo15
+            
+    elif (servo5Pos < servo15):
+        for j in range ( servo5Pos , servo15 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo5Pos = servo15
+    return servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos
+
+def vitrisp2(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos):
+    if (servo4Pos > servo24) :
+        for j in range ( servo4Pos , servo24 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo4Pos = servo24
+
+    elif (servo4Pos < servo24):
+        for j in range ( servo4Pos , servo24 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo4Pos = servo24
+
+    if (servo3Pos > servo23) :
+        for j in range ( servo3Pos , servo23 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo3Pos = servo23
+            
+    elif (servo3Pos < servo23):
+        for j in range ( servo3Pos , servo23 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo3Pos = servo23
+
+    if (servo2Pos > servo22) :
+        for j in range ( servo2Pos , servo22 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo2Pos = servo22
+            
+    elif (servo2Pos < servo22):
+        for j in range ( servo2Pos , servo22 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo2Pos = servo22
+
+    if (servo1Pos > servo21) :
+        for j in range ( servo1Pos , servo21 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo1Pos = servo21
+            
+    elif (servo1Pos < servo21):
+        for j in range ( servo1Pos , servo21 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo1Pos = servo21
+
+    if (servo5Pos > servo25) :
+        for j in range ( servo5Pos , servo25 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo5Pos = servo25
+            
+    elif (servo5Pos < servo25):
+        for j in range ( servo5Pos , servo25 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo5Pos = servo25
+    return servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos
+
+def vitrisp3(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos):
+    if (servo4Pos > servo34) :
+        for j in range ( servo4Pos , servo34 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo4Pos = servo34
+
+    elif (servo4Pos < servo34):
+        for j in range ( servo4Pos , servo34 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo4Pos = servo34
+
+    if (servo3Pos > servo33) :
+        for j in range ( servo3Pos , servo33 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo3Pos = servo33
+            
+    elif (servo3Pos < servo33):
+        for j in range ( servo3Pos , servo33 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo3Pos = servo33
+
+    if (servo2Pos > servo32) :
+        for j in range ( servo2Pos , servo32 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo2Pos = servo32
+            
+    elif (servo2Pos < servo32):
+        for j in range ( servo2Pos , servo32 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo2Pos = servo32
+
+    if (servo1Pos > servo31) :
+        for j in range ( servo1Pos , servo31 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo1Pos = servo31
+            
+    elif (servo1Pos < servo31):
+        for j in range ( servo1Pos , servo31 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo1Pos = servo31
+
+    if (servo5Pos > servo35) :
+        for j in range ( servo5Pos , servo35 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo5Pos = servo35
+            
+    elif (servo5Pos < servo35):
+        for j in range ( servo5Pos , servo35 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo5Pos = servo35
+    return servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos
+
+def vitrikhongphanloai(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos):
+    if (servo4Pos > servo44) :
+        for j in range ( servo4Pos , servo44 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo4Pos = servo44
+
+    elif (servo4Pos < servo44):
+        for j in range ( servo4Pos , servo44 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo4Pos = servo44
+
+    if (servo3Pos > servo43) :
+        for j in range ( servo3Pos , servo43 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo3Pos = servo43
+            
+    elif (servo3Pos < servo43):
+        for j in range ( servo3Pos , servo43 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo3Pos = servo43
+
+    if (servo2Pos > servo42) :
+        for j in range ( servo2Pos , servo42 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo2Pos = servo42
+            
+    elif (servo2Pos < servo42):
+        for j in range ( servo2Pos , servo42 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo2Pos = servo42
+
+    if (servo1Pos > servo41) :
+        for j in range ( servo1Pos , servo41 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo1Pos = servo41
+            
+    elif (servo1Pos < servo41):
+        for j in range ( servo1Pos , servo41 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo1Pos = servo41
+
+    if (servo5Pos > servo45) :
+        for j in range ( servo5Pos , servo45 -1 , -1) :
+            pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
+            sleep(.01) 
+        servo5Pos = servo45
+            
+    elif (servo5Pos < servo45):
+        for j in range ( servo5Pos , servo45 + 1, 1)   :
+            pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
+            sleep(.01)
+        servo5Pos = servo45
+    return servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos
 
 while True:
     
@@ -210,512 +520,26 @@ while True:
     if state == 1 :
         phat_hien_sp = db.child("Mode").child("QR-Data").get().val()           # phát hiện loại sản phẩm để chọn 'vị trí lưu' tương ứng để load
 
-        # chay tu dong sp1
-        if phat_hien_sp == "sp1" :
-            #chay vi tri 0, thu tu servo 1-2-3-4-5
-            if (servo1Pos > servo01) :
-                for j in range ( servo1Pos , servo01 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo1Pos = servo01
-                    
-            elif (servo5Pos < servo01):
-                for j in range ( servo1Pos , servo01 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo1Pos = servo01
-
-            if (servo2Pos > servo02) :
-                for j in range ( servo2Pos , servo02 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo2Pos = servo02
-                    
-            elif (servo2Pos < servo02):
-                for j in range ( servo2Pos , servo02 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo2Pos = servo02
-
-            if (servo3Pos > servo03) :
-                for j in range ( servo3Pos , servo03 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo3Pos = servo03
-                    
-            elif (servo3Pos < servo03):
-                for j in range ( servo3Pos , servo03 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo3Pos = servo03
-
-            if (servo4Pos > servo04) :
-                for j in range ( servo4Pos , servo04 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo4Pos = servo04
-                    
-            elif (servo4Pos < servo04):
-                for j in range ( servo4Pos , servo04 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo4Pos = servo04
-            
-            if (servo5Pos > servo05) :
-                for j in range ( servo5Pos , servo05 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo5Pos = servo05
-                    
-            elif (servo5Pos < servo05):
-                for j in range ( servo5Pos , servo05 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo5Pos = servo05
-
-            #chay vi tri 1, thu tu servo 4-3-2-1-5
-            if (servo4Pos > servo14) :
-                for j in range ( servo4Pos , servo14 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo4Pos = servo14
-                    
-            elif (servo4Pos < servo14):
-                for j in range ( servo4Pos , servo14 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo4Pos = servo14
-
-            if (servo3Pos > servo13) :
-                for j in range ( servo3Pos , servo13 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo3Pos = servo13
-                    
-            elif (servo3Pos < servo13):
-                for j in range ( servo3Pos , servo13 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo3Pos = servo13
-
-            if (servo2Pos > servo12) :
-                for j in range ( servo2Pos , servo12 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo2Pos = servo12
-                    
-            elif (servo2Pos < servo12):
-                for j in range ( servo2Pos , servo12 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo2Pos = servo12
-
-            if (servo1Pos > servo11) :
-                for j in range ( servo1Pos , servo11 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo1Pos = servo11
-                    
-            elif (servo1Pos < servo11):
-                for j in range ( servo1Pos , servo11 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo1Pos = servo11
-
-            if (servo5Pos > servo15) :
-                for j in range ( servo5Pos , servo15 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo5Pos = servo15
-                    
-            elif (servo5Pos < servo15):
-                for j in range ( servo5Pos , servo15 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo5Pos = servo15
-
+        if phat_hien_sp == "sp1" : 
+            servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos = vitrigaphang(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos)
+            servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos = vitrisp1(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos)
             db.child("Mode").update({"State":0})
 
-        # chay tu dong sp2
         if phat_hien_sp == "sp2" : 
-            #chay vi tri 0
-            if (servo1Pos > servo01) :
-                for j in range ( servo1Pos , servo01 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo1Pos = servo01
-                    
-            elif (servo5Pos < servo01):
-                for j in range ( servo1Pos , servo01 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo1Pos = servo1
-
-            if (servo2Pos > servo02) :
-                for j in range ( servo2Pos , servo02 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo2Pos = servo02
-                    
-            elif (servo2Pos < servo02):
-                for j in range ( servo2Pos , servo02 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo2Pos = servo2
-
-            if (servo3Pos > servo03) :
-                for j in range ( servo3Pos , servo03 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo3Pos = servo03
-                    
-            elif (servo3Pos < servo03):
-                for j in range ( servo3Pos , servo03 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo3Pos = servo3
-
-            if (servo4Pos > servo04) :
-                for j in range ( servo4Pos , servo04 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo4Pos = servo04
-                    
-            elif (servo4Pos < servo04):
-                for j in range ( servo4Pos , servo04 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo4Pos = servo4
-            
-            if (servo5Pos > servo05) :
-                for j in range ( servo5Pos , servo05 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo5Pos = servo05
-                    
-            elif (servo5Pos < servo05):
-                for j in range ( servo5Pos , servo05 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo5Pos = servo5
-
-            #chay vi tri 2, thu tu servo 4-3-2-1-5
-
-            if (servo4Pos > servo24) :
-                for j in range ( servo4Pos , servo24 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo4Pos = servo24
-        
-            elif (servo4Pos < servo24):
-                for j in range ( servo4Pos , servo24 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo4Pos = servo24
-
-            if (servo3Pos > servo23) :
-                for j in range ( servo3Pos , servo23 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo3Pos = servo23
-                    
-            elif (servo3Pos < servo23):
-                for j in range ( servo3Pos , servo23 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo3Pos = servo23
-
-            if (servo2Pos > servo22) :
-                for j in range ( servo2Pos , servo22 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo2Pos = servo22
-                    
-            elif (servo2Pos < servo22):
-                for j in range ( servo2Pos , servo22 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo2Pos = servo22
-
-            if (servo1Pos > servo21) :
-                for j in range ( servo1Pos , servo21 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo1Pos = servo21
-                    
-            elif (servo1Pos < servo21):
-                for j in range ( servo1Pos , servo21 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo1Pos = servo21
-
-            if (servo5Pos > servo25) :
-                for j in range ( servo5Pos , servo25 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo5Pos = servo25
-                    
-            elif (servo5Pos < servo25):
-                for j in range ( servo5Pos , servo25 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo5Pos = servo25
-
+            servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos = vitrigaphang(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos)
+            servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos = vitrisp2(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos)
             db.child("Mode").update({"State":0})
 
-        # chay tu dong sp3
         if phat_hien_sp == "sp3" : 
-            #chay vi tri 0
-            if (servo1Pos > servo01) :
-                for j in range ( servo1Pos , servo01 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo1Pos = servo01
-                    
-            elif (servo5Pos < servo01):
-                for j in range ( servo1Pos , servo01 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo1Pos = servo1
-
-            if (servo2Pos > servo02) :
-                for j in range ( servo2Pos , servo02 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo2Pos = servo02
-                    
-            elif (servo2Pos < servo02):
-                for j in range ( servo2Pos , servo02 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo2Pos = servo2
-
-            if (servo3Pos > servo03) :
-                for j in range ( servo3Pos , servo03 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo3Pos = servo03
-                    
-            elif (servo3Pos < servo03):
-                for j in range ( servo3Pos , servo03 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo3Pos = servo3
-
-            if (servo4Pos > servo04) :
-                for j in range ( servo4Pos , servo04 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo4Pos = servo04
-                    
-            elif (servo4Pos < servo04):
-                for j in range ( servo4Pos , servo04 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo4Pos = servo4
-            
-            if (servo5Pos > servo05) :
-                for j in range ( servo5Pos , servo05 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo5Pos = servo05
-                    
-            elif (servo5Pos < servo05):
-                for j in range ( servo5Pos , servo05 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo5Pos = servo5
-
-            #chay vi tri 3, thu tu servo 4-3-2-1-5
-
-            if (servo4Pos > servo34) :
-                for j in range ( servo4Pos , servo34 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo4Pos = servo34
-        
-            elif (servo4Pos < servo34):
-                for j in range ( servo4Pos , servo34 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo4Pos = servo34
-
-            if (servo3Pos > servo33) :
-                for j in range ( servo3Pos , servo33 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo3Pos = servo33
-                    
-            elif (servo3Pos < servo33):
-                for j in range ( servo3Pos , servo33 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo3Pos = servo33
-
-            if (servo2Pos > servo32) :
-                for j in range ( servo2Pos , servo32 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo2Pos = servo32
-                    
-            elif (servo2Pos < servo32):
-                for j in range ( servo2Pos , servo32 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo2Pos = servo32
-
-            if (servo1Pos > servo31) :
-                for j in range ( servo1Pos , servo31 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo1Pos = servo31
-                    
-            elif (servo1Pos < servo31):
-                for j in range ( servo1Pos , servo31 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo1Pos = servo31
-
-            if (servo5Pos > servo35) :
-                for j in range ( servo5Pos , servo35 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo5Pos = servo35
-                    
-            elif (servo5Pos < servo35):
-                for j in range ( servo5Pos , servo35 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo5Pos = servo35
-
+            servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos = vitrigaphang(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos)
+            servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos = vitrisp3(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos)
             db.child("Mode").update({"State":0})
 
-        # chay tu dong neu qr khac
         if (phat_hien_sp != "sp1") and (phat_hien_sp != "sp2") and (phat_hien_sp != "sp3"):
-            #chay vi tri 0
-            if (servo1Pos > servo01) :
-                for j in range ( servo1Pos , servo01 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo1Pos = servo01
-                    
-            elif (servo5Pos < servo01):
-                for j in range ( servo1Pos , servo01 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo1Pos = servo1
-
-            if (servo2Pos > servo02) :
-                for j in range ( servo2Pos , servo02 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo2Pos = servo02
-                    
-            elif (servo2Pos < servo02):
-                for j in range ( servo2Pos , servo02 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo2Pos = servo2
-
-            if (servo3Pos > servo03) :
-                for j in range ( servo3Pos , servo03 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo3Pos = servo03
-                    
-            elif (servo3Pos < servo03):
-                for j in range ( servo3Pos , servo03 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo3Pos = servo3
-
-            if (servo4Pos > servo04) :
-                for j in range ( servo4Pos , servo04 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo4Pos = servo04
-                    
-            elif (servo4Pos < servo04):
-                for j in range ( servo4Pos , servo04 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo4Pos = servo4
-            
-            if (servo5Pos > servo05) :
-                for j in range ( servo5Pos , servo05 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo5Pos = servo05
-                    
-            elif (servo5Pos < servo05):
-                for j in range ( servo5Pos , servo05 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo5Pos = servo5
-
-            #chay vi tri 4, thu tu servo 4-3-2-1-5
-
-            if (servo4Pos > servo44) :
-                for j in range ( servo4Pos , servo44 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo4Pos = servo44
-        
-            elif (servo4Pos < servo44):
-                for j in range ( servo4Pos , servo44 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo4, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo4Pos = servo44
-
-            if (servo3Pos > servo43) :
-                for j in range ( servo3Pos , servo43 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo3Pos = servo43
-                    
-            elif (servo3Pos < servo43):
-                for j in range ( servo3Pos , servo43 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo3, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo3Pos = servo43
-
-            if (servo2Pos > servo42) :
-                for j in range ( servo2Pos , servo42 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo2Pos = servo42
-                    
-            elif (servo2Pos < servo42):
-                for j in range ( servo2Pos , servo42 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo2, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo2Pos = servo42
-
-            if (servo1Pos > servo41) :
-                for j in range ( servo1Pos , servo41 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo1Pos = servo41
-                    
-            elif (servo1Pos < servo41):
-                for j in range ( servo1Pos , servo41 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo1, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo1Pos = servo41
-
-            if (servo5Pos > servo45) :
-                for j in range ( servo5Pos , servo45 -1 , -1) :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01) 
-                servo5Pos = servo45
-                    
-            elif (servo5Pos < servo45):
-                for j in range ( servo5Pos , servo45 + 1, 1)   :
-                    pwm.set_servo_pulsewidth(servo5, 500 + j/180*(2500-500))
-                    sleep(.01)
-                servo5Pos = servo45
-
+            servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos = vitrigaphang(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos)
+            servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos = vitrikhongphanloai(servo1Pos, servo2Pos, servo3Pos, servo4Pos, servo5Pos)
             db.child("Mode").update({"State":0})
 
     pwm.wave_clear()
     pwm.stop()
+
